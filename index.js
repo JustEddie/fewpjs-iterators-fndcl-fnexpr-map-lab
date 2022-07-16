@@ -13,5 +13,9 @@ const tutorials = [
 
 const titleCased = () => {
   // use the .map method on the tutorials to return a new array
-  return tutorials
+  const newArray = tutorials.map(x=> x.split(' ').map(i => i[0].toUpperCase() + i.substring(1)).join(' '));
+
+  return newArray;
+
 }
+console.log(titleCased());
